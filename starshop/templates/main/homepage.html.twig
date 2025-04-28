@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+<h1>
+    Starshop: your monopoly-busting option for Starship parts!
+</h1>
+
+<div>
+    We repaired that many {{numberofstarships}} starships
+</div>
+
+<div>
+    <h2>Ship details</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ shipDetails.name }}</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>{{ shipDetails.class }}</td>
+        </tr>
+        <tr>
+            <th>Captain</th>
+            <td>{{ shipDetails.captain }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ shipDetails.status }}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

@@ -7,6 +7,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 use App\Model\Starship;
+use App\Repository\StarshipRepository;
 
 class StarshipApiController extends AbstractController
 {

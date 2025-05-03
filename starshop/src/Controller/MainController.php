@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/')]
-   public function homepage(): Response
-   {
+  #[Route('/')]
+  public function homepage(): Response
+  {
 
     $starshipCount = 799;
 
@@ -21,9 +21,17 @@ class MainController extends AbstractController
       "status" => "repairing",
     ];
 
-     return $this->render('main/homepage.html.twig', [
+    return $this->render('main/homepage.html.twig', [
       'numberofstarships' => $starshipCount,
       'shipDetails' => $shipDetails,
-     ]);
-   }
+    ]);
+  }
+
+
+  #[Route('/statPage')]
+  public function statPage(): Response
+  {
+    return new Response("<h1>Stat Page</h1>");
+  }
+
 }

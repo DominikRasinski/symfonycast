@@ -15,7 +15,6 @@ class StarshipApiController extends AbstractController
     #[Route('/api/starships')]
     public function getCollection(LoggerInterface $logger, StarshipRepository $repository): Response
     {
-        $logger->info('Starship collection retrieved');
         dd($repository);
         return $this->json($starships);
     }

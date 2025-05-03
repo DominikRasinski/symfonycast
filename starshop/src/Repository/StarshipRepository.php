@@ -2,10 +2,17 @@
 
 namespace App\Repository;
 use App\Model\Starship;
+use Psr\Log\LoggerInterface;
+
 class StarshipRepository
 {
+
+    public function __construct(private LoggerInterface $logger)
+    {}
+
     public function findAll(): array
     {
+        $this->logger->info('Starship collection retrieved');
         return [
             new Starship(
                 1,

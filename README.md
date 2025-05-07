@@ -74,3 +74,12 @@ src
 
 > Serwisy to tak naprawdę obiekty które zwracają dane podczas działania jak naprzykład kontroler zwracający odpowiedź
 
+## Model
+
+Modele wykorzystywane są do modelowania obiektów albo klas. Pozwalają na lepsze zorganizowanie życiem obiektów.
+
+## Repozytorium
+
+Repozytorium opiera się na modelu danego obiektu albo klasy i udostępnia metody pozwalające na szybkie pozyskanie określonych wartości na podstawie danego obiektu.
+
+Repozytoria są bardzo dobrym sposobem na mockowanie zasady działania end-pointów jakie będą przygotowane przez backend, oraz Repozytorium przygotowuje interfejs dla backendu aby zapewnić backend z jakich metod będziemy korzystać.

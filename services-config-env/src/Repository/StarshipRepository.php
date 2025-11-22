@@ -1,19 +1,24 @@
 <?php
 
 namespace App\Repository;
+
 use App\Model\Starship;
-use Psr\Log\LoggerInterface;
 use App\Model\StarshipStatusEnum;
+use Psr\Log\LoggerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
 
-class StarshipRepository
+class StarshipRepository extends AbstractController
 {
-
     public function __construct(private LoggerInterface $logger)
-    {}
+    {
+    }
 
     public function findAll(): array
     {
         $this->logger->info('Starship collection retrieved');
+
         return [
             new Starship(
                 1,
@@ -49,6 +54,7 @@ class StarshipRepository
                 return $starship;
             }
         }
+
         return null;
     }
 }
